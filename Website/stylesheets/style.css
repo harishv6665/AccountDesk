@@ -2,9 +2,330 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
+html,
 body {
-
+    height: 100%;
 }
+
+ul {
+    list-style: none;
+}
+
+
+/* ::::: COMMONLY USED CLASSES STARTS HERE ::::: */
+
+.fleft {
+    float: left;
+}
+
+.fright {
+    float: right;
+}
+
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.height-100-per {
+    height: 100%;
+}
+
+.ad-main-section {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+}
+
+h4.ad-section__title {
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    position: relative;
+    padding-bottom: 8px;
+    color: #464a4f;
+    margin-top: 40px;
+}
+
+h4.ad-section__title:after {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 4px;
+    background: #464a4f;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+/* ::::: COMMONLY USED CLASSES ENDS HERE ::::: */
+
+
+/* ::::: HEADER CLASSES STARTS HERE ::::: */
+
+.ad-header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 999;
+}
+
+a.ad-header__logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    height: 60px;
+    padding: 12px 10px;
+    margin-top: 9px;
+    margin-left: 50px;
+}
+
+a.ad-header__nav__link {
+    font-size: 0.85em;
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    float: left;
+}
+
+nav.ad-header__nav {
+    margin-top: 19px;
+}
+
+button.ad-header-button {
+    height: 38px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid #fff;
+    padding: 0 20px;
+    border-radius: 20px;
+    margin-top: 19px;
+    margin-left: 20px;
+    margin-right: 50px;
+}
+
+span.ad-header-button__title {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 14px;
+    color: #fff;
+}
+
+
+/* ::::: HEADER CLASSES ENDS HERE ::::: */
+
+
+/* ::::: BANNER CLASSES STARTS HERE ::::: */
+
+.ad-banner-section {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url(../images/banner_image.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+h1.ad-banner__title {
+    font-weight: 700;
+    margin-top: 19%;
+    text-align: center;
+    color: #fff;
+    font-size: 3.25em;
+}
+
+h4.ad-banner__sub-title {
+    width: 850px;
+    margin: auto;
+    text-align: center;
+    font-size: 19px;
+    font-weight: 400;
+    margin-top: 20px;
+    color: #fff;
+    line-height: 32px;
+}
+
+button.ad-banner__primary-button {
+    height: 42px;
+    padding: 0 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid #fff;
+    border-radius: 22px;
+    width: 180px;
+    text-align: left;
+    color: #fff;
+    margin: auto;
+    display: block;
+    margin-top: 32px;
+    box-shadow: -3px 5px 6px 0px rgba(0, 0, 0, 0.1);
+}
+
+span.ad-banner__primary-button__title {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.ad-banner__quick-sign-up {
+    position: absolute;
+    bottom: 0;
+    height: 127px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+h3.ad-banner__quick-sign-up__title {
+    color: #fff;
+    font-weight: 100;
+    font-size: 17px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+input.ad-banner__quick-sign-up__input {
+    width: calc((100% / 3) - 150px);
+    margin-right: 28px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #fff;
+    border-radius: 2px;
+    color: #fff;
+    padding: 8px 10px;
+    font-size: 0.84em;
+    height: 36px;
+}
+
+.ad-banner__quick-sign-up__input-wrapper {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button.ad-banner__quick-sign-up__button {
+    padding: 0 30px;
+    height: 38px;
+    border: none;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: -3px 5px 6px 0px rgba(0, 0, 0, 0.1);
+}
+
+span.ad-banner__quick-sign-up__button__title {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16px;
+    color: #269ccd;
+}
+
+span.ad-banner__primary-button__title {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 14px;
+}
+
+
+/* ::::: BANNER CLASSES ENDS HERE ::::: */
+
+
+/* ::::: MEET YOUR ACC CLASSES STARTS HERE ::::: */
+
+.ad-meet-u-acc {
+    padding-bottom: 80px;
+}
+
+ul.ad-meet-u-acc__list {
+    width: 380px;
+    margin-left: 50px;
+}
+
+li.ad-meet-u-acc__list__item {
+    height: 70px;
+    margin-bottom: 30px;
+}
+
+.ad-meet-u-acc__list__item__icon {
+    height: 100%;
+    width: 70px;
+    float: left;
+}
+
+.ad-meet-u-acc__list__item__data {
+    width: calc(100% - 70px);
+    float: left;
+}
+
+h6.ad-meet-u-acc__list__item__data__title {
+    font-size: 14px;
+    color: #464a4f;
+    margin-top: 4px;
+}
+
+p.ad-meet-u-acc__list__item__data__text {
+    font-size: 14px;
+    color: #464a4f;
+    margin-top: 5px;
+}
+
+.ad-meet-u-acc__chat-window {
+    width: 300px;
+    height: 320px;
+    /* border: 1px solid #464a4f; */
+    margin-top: 70px;
+    margin-right: 50px;
+}
+
+.ad-meet-u-acc__chat-window__header {
+    height: 30px;
+    background: #464a4f;
+    padding-left: 5px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+span.ad-meet-u-acc__chat-window__header__circle {
+    width: 13px;
+    height: 13px;
+    background: #fff;
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-top: 7px;
+}
+
+.ad-meet-u-acc__chat-input__wrapper {
+    height: 35px;
+    border: 1px solid #cdd0d4;
+    border-radius: 0 0 5px 5px;
+}
+
+ul.ad-meet-u-acc__chat-window__message-wrapper {
+    height: calc(100% - 65px);
+    border: 1px solid #cdd0d4;
+    border-top: none;
+    border-bottom: none;
+}
+
+input.ad-meet-u-acc__chat-input {
+    height: 100%;
+    width: calc(100% - 36px);
+    border: none;
+    padding: 0 12px;
+    font-size: 13px;
+    font-weight: 100;
+    border-radius: 0 0 0 5px;
+}
+
+button.ad-meet-u-acc__chat-input__button {
+    width: 36px;
+    border: none;
+    height: 100%;
+    background: #00aeef;
+    border-radius: 0 0 4px 0;
+}
+
+
+/* ::::: MEET YOUR ACC CLASSES ENDS HERE ::::: */
