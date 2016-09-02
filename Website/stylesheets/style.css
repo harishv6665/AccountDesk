@@ -14,6 +14,17 @@ ul {
     list-style: none;
 }
 
+[class^="flaticon-"]:before,
+[class*=" flaticon-"]:before,
+[class^="flaticon-"]:after,
+[class*=" flaticon-"]:after {
+    margin-left: 0 !important;
+}
+
+button {
+    cursor: pointer;
+}
+
 
 /* ::::: COMMONLY USED CLASSES STARTS HERE ::::: */
 
@@ -48,7 +59,11 @@ h4.ad-section__title {
     position: relative;
     padding-bottom: 8px;
     color: #464a4f;
-    margin-top: 40px;
+    padding-top: 40px;
+}
+
+h4.ad-section__title.light-color {
+    color: #fff;
 }
 
 h4.ad-section__title:after {
@@ -60,6 +75,15 @@ h4.ad-section__title:after {
     bottom: 0;
     left: 0;
     right: 0;
+    margin: auto;
+}
+
+h4.ad-section__title.light-color:after {
+    background: #fff;
+}
+
+.ad-layout-container {
+    width: 1000px;
     margin: auto;
 }
 
@@ -129,7 +153,7 @@ span.ad-header-button__title {
     top: 0;
     height: 100%;
     width: 100%;
-    background-image: url(../images/banner_image.png);
+    background-image: url(../images/banner_image_2.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -160,13 +184,14 @@ button.ad-banner__primary-button {
     background: rgba(255, 255, 255, 0.1);
     border: 2px solid #fff;
     border-radius: 22px;
-    width: 180px;
+    width: 170px;
     text-align: left;
     color: #fff;
     margin: auto;
     display: block;
     margin-top: 32px;
     box-shadow: -3px 5px 6px 0px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 span.ad-banner__primary-button__title {
@@ -202,6 +227,22 @@ input.ad-banner__quick-sign-up__input {
     height: 36px;
 }
 
+input.ad-banner__quick-sign-up__input::-webkit-input-placeholder {
+    color: #fff;
+}
+
+input.ad-banner__quick-sign-up__input:-moz-placeholder {
+    color: #fff;
+}
+
+input.ad-banner__quick-sign-up__input::-moz-placeholder {
+    color: #fff;
+}
+
+input.ad-banner__quick-sign-up__input:-ms-input-placeholder {
+    color: #fff;
+}
+
 .ad-banner__quick-sign-up__input-wrapper {
     text-align: center;
     margin-top: 20px;
@@ -216,6 +257,16 @@ button.ad-banner__quick-sign-up__button {
     box-shadow: -3px 5px 6px 0px rgba(0, 0, 0, 0.1);
 }
 
+span.ad-banner__primary-button__icon:before {
+    font-size: 2.2em;
+}
+
+span.ad-banner__primary-button__icon {
+    position: absolute;
+    right: 7px;
+    top: 6px;
+}
+
 span.ad-banner__quick-sign-up__button__title {
     font-size: 14px;
     font-weight: 600;
@@ -224,7 +275,7 @@ span.ad-banner__quick-sign-up__button__title {
 }
 
 span.ad-banner__primary-button__title {
-    font-size: 14px;
+    font-size: 1.35em;
     font-weight: 600;
     line-height: 14px;
 }
@@ -240,12 +291,13 @@ span.ad-banner__primary-button__title {
 }
 
 ul.ad-meet-u-acc__list {
-    width: 380px;
+    width: 400px;
     margin-left: 50px;
+    margin-top: 60px;
 }
 
 li.ad-meet-u-acc__list__item {
-    height: 70px;
+    height: 90px;
     margin-bottom: 30px;
 }
 
@@ -253,23 +305,38 @@ li.ad-meet-u-acc__list__item {
     height: 100%;
     width: 70px;
     float: left;
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: center center;
+}
+
+.ad-meet-u-acc__list__item__icon.icon1 {
+    background-image: url(../images/users-icon.png);
+    background-size: contain;
+}
+
+.ad-meet-u-acc__list__item__icon.icon2 {
+    background-image: url(../images/clock-icon.png);
+}
+
+.ad-meet-u-acc__list__item__icon.icon3 {
+    background-image: url(../images/location_icon.png);
 }
 
 .ad-meet-u-acc__list__item__data {
-    width: calc(100% - 70px);
-    float: left;
+    width: calc(100% - 100px);
 }
 
 h6.ad-meet-u-acc__list__item__data__title {
-    font-size: 14px;
+    font-size: 1.1em;
     color: #464a4f;
-    margin-top: 4px;
+    margin-top: 8px;
 }
 
 p.ad-meet-u-acc__list__item__data__text {
-    font-size: 14px;
+    font-size: 0.9em;
     color: #464a4f;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 .ad-meet-u-acc__chat-window {
@@ -281,19 +348,19 @@ p.ad-meet-u-acc__list__item__data__text {
 }
 
 .ad-meet-u-acc__chat-window__header {
-    height: 30px;
+    height: 34px;
     background: #464a4f;
     padding-left: 5px;
     border-radius: 5px 5px 0px 0px;
 }
 
 span.ad-meet-u-acc__chat-window__header__circle {
-    width: 13px;
-    height: 13px;
+    width: 12px;
+    height: 12px;
     background: #fff;
     border-radius: 50%;
     margin-left: 10px;
-    margin-top: 7px;
+    margin-top: 10px;
 }
 
 .ad-meet-u-acc__chat-input__wrapper {
@@ -307,6 +374,8 @@ ul.ad-meet-u-acc__chat-window__message-wrapper {
     border: 1px solid #cdd0d4;
     border-top: none;
     border-bottom: none;
+    padding-top: 20px;
+    background: #f6f8fc;
 }
 
 input.ad-meet-u-acc__chat-input {
@@ -327,5 +396,552 @@ button.ad-meet-u-acc__chat-input__button {
     border-radius: 0 0 4px 0;
 }
 
+button.ad-meet-u-acc__chat-input__button.flaticon-symbol-mail-1:before {
+    font-size: 1.3em;
+    color: #fff;
+}
+
+li.ad-meet-u-acc__chat-window__message {
+    width: calc(100% - 40px);
+    margin: auto;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.ad-meet-u-acc__chat-window__message__user-image {
+    height: 40px;
+    width: 40px;
+    margin-top: 5px;
+    border-radius: 50%;
+    background: url(../images/chat-user.png);
+    background-size: contain;
+}
+
+.ad-meet-u-acc__chat-window__message__data {
+    width: calc(100% - 55px);
+    border-radius: 3px;
+    padding: 7px 12px;
+    box-shadow: 0 0 15px 0 rgba(140, 140, 140, 0.4);
+    color: #464a4f;
+}
+
+p.ad-meet-u-acc__chat-window__message__data__text {
+    font-size: 13px;
+    opacity: 0.9;
+}
+
+span.ad-meet-u-acc__chat-window__message__data__secondary-text {
+    font-size: 9px;
+    font-weight: 600;
+    opacity: 0.8;
+}
+
+li.ad-meet-u-acc__chat-window__message.slef-message .ad-meet-u-acc__chat-window__message__data {
+    width: calc(100% - 25px);
+    background: #00aeef;
+    color: #fff;
+}
 
 /* ::::: MEET YOUR ACC CLASSES ENDS HERE ::::: */
+
+
+/* ::::: HOW IT WORKS CLASSES STARTS HERE ::::: */
+
+.ad-how-it-works {
+    background: #f7fafc;
+    padding: 20px 0 120px 0;
+}
+
+.ad-how-it-works__list__item__image {
+    width: 300px;
+    height: 150px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.ad-how-it-works__list__item__image.img1 {
+    background-image: url(../images/info-g-1.png);
+    background-size: 60%;
+}
+
+.ad-how-it-works__list__item__image.img2 {
+    background-image: url(../images/info-g-2.png);
+    background-size: 95%;
+}
+
+.ad-how-it-works__list__item__image.img3 {
+    background-image: url(../images/info-g-3.png);
+    background-size: 70%;
+}
+
+.ad-how-it-works__list__item__data {
+    width: calc(100% - 350px);
+    color: #464a4f;
+}
+
+ul.ad-how-it-works__list {
+    margin-top: 70px;
+}
+
+li.ad-how-it-works__list__item {
+    margin-bottom: 120px;
+    position: relative;
+}
+
+li.ad-how-it-works__list__item:last-child {
+    margin-bottom: 0;
+}
+
+h3.ad-how-it-works__list__item__data__title {
+    font-size: 2.2em;
+    font-weight: 600;
+    margin: 12px 0;
+}
+
+p.ad-how-it-works__list__item__data__text {
+    font-size: 1.2em;
+}
+
+.ad-how-it-works__list__item__path-line:before,
+.ad-how-it-works__list__item__path-line:after {
+    content: '';
+    position: absolute;
+    height: 60px;
+    width: 70%;
+    border: 1px solid #c2c5c8;
+    margin: auto;
+}
+
+.ad-how-it-works__list__item__path-line:before {
+    bottom: -60px;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    border-radius: 0px 0px 0px 20px;
+    left: 15%;
+    width: 60%;
+}
+
+.ad-how-it-works__list__item__path-line:after {
+    bottom: -121px;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-radius: 0px 20px 0px 0px;
+    right: 15%;
+    width: 60%;
+}
+
+.ad-how-it-works__list__item__path-line.rotate:before {
+    transform: rotateX(180deg);
+    transform-origin: bottom;
+}
+
+.ad-how-it-works__list__item__path-line.rotate:after {
+    transform: rotateX(180deg);
+    transform-origin: top;
+    top: 212px;
+}
+
+/* ::::: HOW IT WORKS CLASSES ENDS HERE ::::: */
+
+
+/* ::::: REPORTS CLASSES STARTS HERE ::::: */
+
+.ad-reports {
+    background: url(../images/reports-bg.png) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 550px;
+}
+
+li.ad-reports__list__item {
+    float: left;
+    width: calc(100% / 3);
+    text-align: center;
+}
+
+.ad-reports__list__item__icon {
+    width: 120px;
+    height: 120px;
+    margin: auto;
+    position: relative;
+}
+
+.ad-reports__list__item__icon.flaticon-smartphone-search-1:before,
+.ad-reports__list__item__icon.flaticon-calculator-ic-1:before {
+    position: absolute;
+    font-size: 3.5em;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.ad-reports__list__item__icon.flaticon-smartphone-search-1:before {
+    color: #4692b2;
+}
+
+.ad-reports__list__item__icon.flaticon-calculator-ic-1:before {
+    color: #8081e3;
+}
+
+.ad-reports__list__item__icon.percentage-icon:before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 2px dashed #bc7ccf;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.ad-reports__list__item__icon.percentage-icon:after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background: #bc7ccf;
+    top: 50%;
+    transform-origin: center center;
+    transform: translateX(-50%) translateY(-50%) rotate(-45deg);}
+
+.ad-reports__list__item__icon.percentage-icon span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.ad-reports__list__item__icon.percentage-icon span:before {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    border: 2px solid #bc7ccf;
+    top: -10px;
+    left: -11px;
+}
+
+.ad-reports__list__item__icon.percentage-icon span:after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    border: 2px solid #bc7ccf;
+    bottom: -10px;
+    right: -11px;
+}
+
+.ad-reports__list__item__data {
+    width: 240px;
+    margin: auto;
+    color: #fff;
+}
+
+h5.ad-reports__list__item__data__title {
+    font-size: 0.9em;
+    font-weight: 700;
+    letter-spacing: 0.11em;
+    line-height: 25px;
+}
+
+p.ad-reports__list__item__data__text {
+    font-size: 0.83em;
+    font-weight: 100;
+    opacity: 0.6;
+    margin-top: 23px;
+    line-height: 22px;
+}
+
+ul.ad-reports__list {
+    margin-top: 90px;
+}
+
+/* ::::: REPORTS CLASSES ENDS HERE ::::: */
+
+
+/* ::::: ABOUT CLASSES STARTS HERE ::::: */
+
+.ad-about {
+    height: 320px;
+    background: url(../images/about-bg.png) no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.ad-about__col__wrapper {
+    height: 100%;
+    color: #fff;
+}
+
+.ad-about__data-col {
+    height: 100%;
+    width: 40%;
+    background: rgba(0, 174, 239, 0.92);
+    padding: 75px 0 0 50px;
+}
+
+.ad-about__list-col {
+    height: 100%;
+    background: rgba(88, 99, 113, 0.92);
+    width: 60%;
+}
+
+.ad-about__list-col__list__item__icon:before {
+    position: absolute;
+    font-size: 4.1em;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+h6.ad-about__data-col__sub-title {
+    font-size: 1em;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+}
+
+h4.ad-about__data-col__title {
+    font-size: 1.65em;
+    letter-spacing: 0.08em;
+    margin-top: 5px;
+}
+
+p.ad-about__data-col__text {
+    font-size: 0.95em;
+    font-weight: 100;
+    width: 320px;
+    margin-top: 30px;
+    letter-spacing: 0.05em;
+}
+
+ul.ad-about__list-col__list {
+    height: 100%;
+    width: calc(100% - 80px);
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    align-items: center;
+}
+
+li.ad-about__list-col__list__item {text-align: center;}
+
+.ad-about__list-col__list__item__icon__wrapper {
+    width: 100px;
+    height: 100px;
+    background: rgba(0, 0, 0, 0.3);
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.ad-about__list-col__list__item__icon.user-icon {
+    height: 100%;
+    background: url(../images/prof-icon.png) no-repeat;
+    background-size: 50%;
+    background-position: center center;
+}
+
+span.ad-about__list-col__list__item__text-1 {
+    display: block;
+    font-size: 0.9em;
+    font-weight: 700;
+}
+
+span.ad-about__list-col__list__item__text-2 {
+    display: block;
+    font-size: 0.9em;
+    margin-top: 8px;
+    opacity: 0.6;
+}
+
+/* ::::: ABOUT CLASSES ENDS HERE ::::: */
+
+
+/* ::::: PREVIEW CLASSES STARTS HERE ::::: */
+
+.ad-preview {
+    height: 660px;
+    position: relative;
+}
+
+ul.ad-preview__screen__list {
+    position: absolute;
+    width: 43%;
+    height: 460px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 1px solid #000;
+    border-radius: 4px 0px 0px 4px;
+    border-right: none;
+}
+
+.ad-preview__data-slider {
+    width: 350px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 70px;
+}
+
+li.ad-preview__data-slider__nav__selector {
+    width: 38px;
+    height: 5px;
+    background: rgba(88, 99, 113, 0.2);
+    border-radius: 5px;
+    float: left;
+    margin-right: 26px;
+    cursor: pointer;
+}
+
+ul.ad-preview__data-slider__content__wrapper {
+    margin-top: 30px;
+}
+
+h6.ad-preview__data-slider__content__title {
+    font-size: 1.9em;
+    font-weight: 700;
+}
+
+li.ad-preview__data-slider__content {
+    color: #464a4f;
+}
+
+p.ad-preview__data-slider__content__text {
+    font-size: 0.95em;
+    letter-spacing: 0.03em;
+    line-height: 25px;
+    margin-top: 5px;
+}
+
+li.ad-preview__data-slider__nav__selector.active {
+    background: #269ccd;
+}
+
+/* ::::: PREVIEW CLASSES ENDS HERE ::::: */
+
+
+/* ::::: TRAIL CLASSES STARTS HERE ::::: */
+
+.ad-trail {
+    height: 220px;
+    background: url(../images/trail-bg.png) no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+span.ad-trail__text {
+    display: block;
+    font-size: 1.2em;
+    color: #fff;
+    letter-spacing: 0.04em;
+    text-align: center;
+    padding-top: 60px;
+}
+
+button.ad-trail__button {
+    display: block;
+    width: 170px;
+    margin: auto;
+    margin-top: 45px;
+    padding: 10px;
+    border: none;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+}
+
+span.ad-trail__button__title {
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    word-spacing: 0.1em;
+}
+
+/* ::::: TRAIL CLASSES ENDS HERE ::::: */
+
+
+/* ::::: FOOTER CLASSES STARTS HERE ::::: */
+
+.ad-footer {
+    height: 230px;
+    background: #3e3e53;
+    padding: 0 70px;
+}
+
+nav.ad-footer__primary-nav {
+    float: left;
+    width: 120px;
+    margin-right: 30px;
+    position: relative;
+    margin-top: 55px;
+}
+
+a.ad-footer__primary-nav__link {
+    display: block;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 0.75em;
+    letter-spacing: 0.03em;
+    padding: 5px 0;
+    margin-bottom: 8px;
+}
+
+nav.ad-footer__primary-nav:before {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    border-radius: 4px;
+    top: -15px;
+}
+
+a.ad-footer__primary-nav__link:hover {
+    text-decoration: underline;
+}
+
+nav.ad-footer__secondary-nav {
+    float: right;
+    text-align: center;
+}
+
+.ad-footer__secondary-nav__link__icon__wrapper {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: auto;
+    margin-bottom: 12px;
+    position: relative;
+}
+
+span.ad-footer__secondary-nav__icon:before {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 3em;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+a.ad-footer__secondary-nav__link {
+    float: left;
+    margin-left: 60px;
+    text-decoration: none;
+    color: #fff;
+    margin-top: 60px;
+}
+
+span.ad-footer__secondary-nav__link__text {
+    font-size: 14px;
+}
+
+a.ad-footer__secondary-nav__link:first-child {
+    margin-left: 0;
+}
+
+a.ad-footer__secondary-nav__link:hover {
+    text-decoration: underline;
+}
+
+/* ::::: FOOTER CLASSES ENDS HERE ::::: */
