@@ -152,6 +152,28 @@ span.ad-header-button__title {
     display: none;
 }
 
+.ad-header.fixed-header {
+    position: fixed;
+    top: -100px;
+    background: #fff;
+    box-shadow: 0 0 15px 0 RGBA(0, 0, 0, 0.29);
+    transition: all 0.2s ease-in;
+}
+
+.ad-header.fixed-header .ad-header__logo,
+.ad-header.fixed-header .ad-header__nav__link,
+.ad-header.fixed-header .ad-header-button__title {
+    color: #00aeef;
+}
+
+.ad-header.fixed-header button.ad-header-button {
+    border-color: #00aeef;
+}
+
+.ad-header.fixed-header {
+    top: 0;
+}
+
 /* ::::: HEADER CLASSES ENDS HERE ::::: */
 
 

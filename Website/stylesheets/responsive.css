@@ -245,7 +245,7 @@
         transform: translateX(100px);
     }
     button.ad-header-mobile-button {
-        width: 35px;
+        width: 30px;
         height: 30px;
         margin-right: 30px;
     }
@@ -296,7 +296,9 @@
     }
     a.ad-header__logo {
         margin-left: 10px;
-        margin-top: 5px;
+        margin-top: 1px;
+        font-size: 1.2em;
+        height: 100%;
     }
     button.ad-header-button {
         display: none;
@@ -422,6 +424,12 @@
     }
     span.ad-footer__secondary-nav__link__text {
         font-size: 0.8em;
+    }
+    span.ad-header-mobile-button__icon-line {
+        background: #00aeef;
+    }
+    .ad-header {
+        height: 55px;
     }
     /* :: footer classes ends here ::*/
 }
