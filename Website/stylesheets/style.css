@@ -23,6 +23,8 @@ ul {
 
 button {
     cursor: pointer;
+    background: none;
+    border: none;
 }
 
 
@@ -201,11 +203,6 @@ button.ad-banner__primary-button {
     margin-top: 32px;
     box-shadow: -3px 5px 6px 0px rgba(0, 0, 0, 0.1);
     position: relative;
-}
-
-span.ad-banner__primary-button__title {
-    font-size: 15px;
-    font-weight: 500;
 }
 
 .ad-banner__quick-sign-up {
