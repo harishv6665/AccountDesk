@@ -83,7 +83,7 @@ h4.ad-section__title.light-color:after {
 }
 
 .ad-layout-container {
-    width: 1000px;
+    max-width: 1100px;
     margin: auto;
 }
 
@@ -142,6 +142,9 @@ span.ad-header-button__title {
     color: #fff;
 }
 
+.ad-header-mobile-button {
+    display: none;
+}
 
 /* ::::: HEADER CLASSES ENDS HERE ::::: */
 
@@ -159,9 +162,15 @@ span.ad-header-button__title {
     background-position: center center;
 }
 
+.ad-banner__text-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
 h1.ad-banner__title {
     font-weight: 700;
-    margin-top: 19%;
     text-align: center;
     color: #fff;
     font-size: 3.25em;

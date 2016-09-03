@@ -3,10 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ACCOUNT DESK</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
     <link rel="stylesheet" href="fonts/flaticon/flaticon.css">
     <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/responsive.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
 </head>
 
 <body>
@@ -26,18 +29,26 @@
                 <button class="ad-header-button fleft">
                     <span class="ad-header-button__title">SIGN UP/SIGN IN</span>
                 </button>
+
+                <button class="ad-header-mobile-button">
+                    <span class="ad-header-mobile-button__icon-line"></span>
+                    <span class="ad-header-mobile-button__icon-line"></span>
+                    <span class="ad-header-mobile-button__icon-line"></span>
+                </button>
             </div>
         </div>
 
         <div class="ad-banner-section">
             <div class="ad-banner">
-                <h1 class="ad-banner__title">A NEW KIND OF ACCOUNTANT</h1>
-                <h4 class="ad-banner__sub-title">AccountDesk is a modern bookkeeping service that provides audit proof financial statement from our online accountants.</h4>
+                <div class="ad-banner__text-wrapper">
+                    <h1 class="ad-banner__title">A NEW KIND OF ACCOUNTANT</h1>
+                    <h4 class="ad-banner__sub-title">AccountDesk is a modern bookkeeping service that provides audit proof financial statement from our online accountants.</h4>
 
-                <button class="ad-banner__primary-button">
-                    <span class="ad-banner__primary-button__title">GET STARTED</span>
-                    <span class="ad-banner__primary-button__icon flaticon-play-button-ic-1"></span>
-                </button>
+                    <button class="ad-banner__primary-button">
+                        <span class="ad-banner__primary-button__title">GET STARTED</span>
+                        <span class="ad-banner__primary-button__icon flaticon-play-button-ic-1"></span>
+                    </button>
+                </div>
 
                 <div class="ad-banner__quick-sign-up">
                     <h3 class="ad-banner__quick-sign-up__title">
@@ -156,7 +167,7 @@
             </div>
             <div class="ad-reports">
                 <div class="ad-layout-container">
-                    <h4 class="ad-section__title light-color">How it Works</h4>
+                    <h4 class="ad-section__title light-color">Your reports online</h4>
                     <ul class="ad-reports__list clearfix">
                         <li class="ad-reports__list__item">
                             <div class="ad-reports__list__item__icon flaticon-smartphone-search-1"></div>
@@ -251,7 +262,7 @@
                     <span class="ad-trail__button__title">START FREE TRAIL</span>
                 </button>
             </div>
-            <div class="ad-footer">
+            <div class="ad-footer clearfix">
                 <nav class="ad-footer__primary-nav">
                     <a href="#" class="ad-footer__primary-nav__link">HOME</a>
                     <a href="#" class="ad-footer__primary-nav__link">ABOUT US</a>
@@ -290,6 +301,7 @@
         </div>
 
     </div>
+        <script src="script/tween_animation.js"></script>
 </body>
 
 </html>
