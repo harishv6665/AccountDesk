@@ -166,6 +166,10 @@ span.ad-header-button__title {
     color: #00aeef;
 }
 
+.ad-header.fixed-header span.ad-header-mobile-button__icon-line {
+        background: #00aeef;
+    }
+
 .ad-header.fixed-header button.ad-header-button {
     border-color: #00aeef;
 }
