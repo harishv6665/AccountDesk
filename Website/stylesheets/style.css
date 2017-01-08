@@ -410,8 +410,9 @@ ul.ad-meet-u-acc__chat-window__message-wrapper {
     border: 1px solid #cdd0d4;
     border-top: none;
     border-bottom: none;
-    padding-top: 20px;
+    padding: 15px;
     background: #f6f8fc;
+    overflow: auto;
 }
 
 input.ad-meet-u-acc__chat-input {
@@ -442,6 +443,17 @@ li.ad-meet-u-acc__chat-window__message {
     margin: auto;
     display: block;
     margin-bottom: 20px;
+    opacity: 0;
+    transition: all 0.15s ease-out;
+}
+
+li.ad-meet-u-acc__chat-window__message {
+    transform: translateY(30px);
+}
+
+li.ad-meet-u-acc__chat-window__message.animate {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .ad-meet-u-acc__chat-window__message__user-image {
@@ -454,7 +466,7 @@ li.ad-meet-u-acc__chat-window__message {
 }
 
 .ad-meet-u-acc__chat-window__message__data {
-    width: calc(100% - 55px);
+    width: calc(100% - 30px);
     border-radius: 3px;
     padding: 7px 12px;
     box-shadow: 0 0 15px 0 rgba(140, 140, 140, 0.4);
@@ -472,8 +484,9 @@ span.ad-meet-u-acc__chat-window__message__data__secondary-text {
     opacity: 0.8;
 }
 
-li.ad-meet-u-acc__chat-window__message.slef-message .ad-meet-u-acc__chat-window__message__data {
-    width: calc(100% - 25px);
+li.ad-meet-u-acc__chat-window__message.slef-message .ad-meet-u-acc__chat-window__message__data,
+li.ad-meet-u-acc__chat-window__message.fright .ad-meet-u-acc__chat-window__message__data {
+    width: calc(100% - 30px);
     background: #00aeef;
     color: #fff;
 }
